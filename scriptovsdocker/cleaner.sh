@@ -9,7 +9,8 @@ sudo docker rm ubuntu2
 
 sudo docker network rm ovs-network1
 sudo docker network rm ovs-network2
+sudo docker network rm ovs-comm
 #cleaned
-echo "clear"
+echo "_____ CLEARED _____"
 
 sudo docker ps
