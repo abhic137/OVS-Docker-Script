@@ -7,5 +7,7 @@ sudo docker run -itd --net=host --name=ovs-vswitchd --volumes-from=ovsdb-server 
 sudo docker network connect ovs-network1 ovs-vswitchd
 sudo docker network connect ovs-network2 ovs-vswitchd
 
-sudo docker run -itd --name ubuntu1 --network ovs-network1 ubuntu
-sudo docker run -itd --name ubuntu2 --network ovs-network2 ubuntu
+sudo docker run -itd --name ubuntu1 --network ovs-network1 --cap-add=NET_ADMIN ubuntu
+sudo docker run -itd --name ubuntu2 --network ovs-network2 --cap-add=NET_ADMIN ubuntu
+echo "ALL CONTAINERS STARTED"
+sudo dockr ps
