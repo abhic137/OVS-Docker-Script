@@ -12,3 +12,4 @@ sudo docker network rm ovs-network2
 #cleaned
 echo "clear"
 
+sudo docker ps
